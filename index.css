@@ -1,0 +1,125 @@
+:root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* HEADER AND LOGO STYLES */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+/* NAVIGATION MENU */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-list li {
+    margin: 0 5px;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ff5733;
+}
+
+/* BURGER MENU STYLES */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #DD71C6;
+    margin: 3px 0;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 900px) {
+    /* Header and Logo */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 90%;
+        z-index: 1000;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+
+    /* Navbar */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
