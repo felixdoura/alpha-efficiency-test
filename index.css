@@ -2,7 +2,9 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body, ul, li {
+body,
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -96,6 +98,7 @@ header {
 /* ----------------- */
 
 @media screen and (max-width: 900px) {
+
     /* Header and Logo */
     header {
         display: flex;
@@ -104,7 +107,6 @@ header {
         padding: 10px 20px;
         position: fixed;
         top: 0;
-        width: 90%;
         z-index: 1000;
     }
 
@@ -127,7 +129,6 @@ header {
         text-align: center;
         background-color: white;
         position: absolute;
-        top: 100px;
         width: 100%;
         left: 0;
         right: 0;
@@ -135,6 +136,8 @@ header {
 
     .nav-list.active {
         display: flex;
+        width: 100%;
+        top: 100px;
     }
 
     .nav-list li {
@@ -155,6 +158,10 @@ main {
     margin-top: 100px;
 }
 
+.home-wrapper-1 {
+    margin-top: 20px;
+}
+
 .offer-color {
     color: #DD71C6 !important;
 }
@@ -170,7 +177,7 @@ main {
     top: 0;
 }
 
-    /* Offer */
+/* Offer */
 .offer-info button {
     background-color: #DD71C6;
     padding: 5px;
@@ -184,24 +191,29 @@ main {
     line-height: 67.5px;
 }
 
-    /* Countdown */
+/* Countdown */
 
 .countdown {
     backdrop-filter: blur(10px);
     background-color: rgb(255 255 255 / 0.5);
     color: black;
-    padding: 20px;
     border-radius: 25px;
     height: 12rem;
     width: 90%;
     margin: 100px auto;
-    display: flex;
+    display: inline-flex;
+    padding: 2px 41px 36px 41px;
     flex-direction: column;
+    gap: 10px;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.countdown-title {
     text-align: center;
 }
 
@@ -210,6 +222,7 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
 }
+
 
 .countdown-item {
     display: flex;
@@ -220,12 +233,20 @@ h1 {
 }
 
 .countdown-number {
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 50px;
+    font-weight: 500;
 }
 
 .countdown-label {
-    font-size: 18px;
+    color: #0083D3;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 177.9%;
+    /* 21.348px */
+    letter-spacing: 3.9px;
 }
 
 /* ----------------- */
@@ -245,9 +266,30 @@ h1 {
         text-align: center;
     }
 
+    .offer-info h2 {
+        font-size: 30px;
+        white-space: normal;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 48px */
+    }
+
     .countdown {
         max-width: 100%;
         margin: 10px auto;
+    }
+
+    .countdown-number {
+        font-size: 36px;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .countdown-number {
+        font-size: 18px;
+        font-weight: 500;
     }
 }
 
@@ -274,8 +316,62 @@ h1 {
 }
 
 @media screen and (max-width: 820px) {
+    .countdown {
+        display: flex;
+        width: 400px;
+        height: 170px;
+        padding: 26px 36px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .dropdown-section {
+        padding: 0 1rem
+    }
+
     .dropdown-btn {
         white-space: normal;
+        text-align: left;
+    }
+
+    .countdown-timer {
+        gap: 2rem;
+    }
+
+    .countdown-label {
+        color: #0083D3;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 177.9%;
+        /* 21.348px */
+        letter-spacing: 3.9px;
     }
 }
 
+
+@media screen and (max-width: 420px) {
+    .countdown {
+        width: 240px;
+    }
+
+    .countdown-timer {
+        gap: 0.2rem;
+    }
+
+    .countdown-label {
+        color: #0083D3;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 177.9%;
+        /* 14.232px */
+        letter-spacing: 2.6px;
+    }
+}
